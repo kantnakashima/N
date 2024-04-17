@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>top</title>
+				<link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+        /* ページ全体のスタイリング */
+        body {
+            padding: 20px;
+        }
+        
+        /* フォームのスタイリング */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+ 
+        /* ボタンのスタイリング */
+        .btn-primary {
+            width: 100%;
+        }
+ 
+        /* 入力エリアのスタイリング */
+        .form-group label {
+            font-weight: bold;
+        }
+ 
+        .form-group input {
+            width: 100%;
+        }
+ 
+        /* 出力エリアのスタイリング */
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+	  <style type="text/css">
+      body {
+        background-color: rgb(223, 255, 223);
+      }
+      </style>
+    </head>
+    <body>
+			<h1>得点管理システム</h1>
+       	    <h2 th:text="${message}"></h2>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+				<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+		<form id="choiceForm">		
+			<button type="button" onclick="goToPage('http://localhost:8080/menyu')">ログイン</button>
+		</form>
+		
+		<script>
+       		 function goToPage(destinationURL) {
+            // 選択されたボタンに対応するページに遷移
+            window.location.href = destinationURL;
+       		}
+    	</script>
+	</body>
+</html>

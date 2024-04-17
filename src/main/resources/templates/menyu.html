@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ログイン画面</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+        /* ページ全体のスタイリング */
+        body {
+            padding: 20px;
+        }
+        
+        /* フォームのスタイリング */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+ 
+        /* ボタンのスタイリング */
+        .btn-primary {
+            width: 100%;
+        }
+ 
+        /* 入力エリアのスタイリング */
+        .form-group label {
+            font-weight: bold;
+        }
+ 
+        .form-group input {
+            width: 100%;
+        }
+ 
+        /* 出力エリアのスタイリング */
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+<style type="text/css">
+      body {
+        background-color: rgb(223, 255, 223);
+      }
+      </style>
+</head>
+<body>
+    <h1>ログイン画面</h1>
+    
+    </from>
+    	
+    	<h4>メニュー</h4>
+    	</form>
+    
+    	<form id="choiceForm">		
+			<button type="button" onclick="goToPage('http://localhost:8080/gakuseiitiran')">学生管理</button>
+			<button type="button" onclick="goToPage('http://localhost:8080/Classnum/')">Classnum</button>
+		</form>
+		
+		<script>
+       		 function goToPage(destinationURL) {
+            // 選択されたボタンに対応するページに遷移
+            window.location.href = destinationURL;
+       		}
+    	</script>
+    </from>
+</body>
+</html>

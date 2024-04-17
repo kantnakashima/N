@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生情報編集</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>学生情報編集</h1>
+    <form th:action="@{/gakuseikousin}" method="post" th:object="${STUDENT}">
+        <input type="hidden" th:field="*{id}" />
+        <input type="hidden" th:field="*{NO}" />
+        <div class="form-group">
+            <label for="NAME">氏名:</label>
+            <input type="text" class="form-control" id="NAME" th:field="*{NAME}" />
+        </div>
+        <div class="form-group">
+            <label for="CLASS_NUM">クラス番号:</label>
+            <input type="text" class="form-control" id="CLASS_NUM" th:field="*{CLASS_NUM}" />
+        </div>
+        <input type="hidden" th:field="*{SCHOOL_CD}" />
+        <button type="submit" class="btn btn-primary">更新する</button>
+    </form>
+
+    <div th:if="${successMessage}" class="alert alert-success" role="alert">
+        <strong th:text="${successMessage}"></strong>
+    </div>
+    <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+        <strong th:text="${errorMessage}"></strong>
+    </div>
+    
+    <a href="/gakuseiitiran" class="btn btn-secondary">一覧に戻る</a>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
